@@ -15,9 +15,8 @@
         android:textAlignment="center"
         android:textSize="25sp"
         android:textColor="@color/white"
-        android:fontFamily="sans-serif-thin"
+        android:fontFamily="sans-serif-condensed"
         android:layout_marginTop="50dp"/>
-
 
     <com.jackandphantom.carouselrecyclerview.CarouselRecyclerview
         android:id="@+id/recycler_view_currency"

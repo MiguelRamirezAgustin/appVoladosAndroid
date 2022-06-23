@@ -1,6 +1,7 @@
 package com.app.volados
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,6 +20,12 @@ class AdapterCurrency(val context: Context,private var listCurrency:List<ModelCu
        val currency = listCurrency[position]
         Glide.with(holder.img).load(currency.id).into(holder.img);
         holder.nombre.text = currency.name
+
+        holder.img.setOnClickListener{
+            val  intent  = Intent(context,VoladosActivity::class.java)
+                 intent.putExtra("process", true)
+            context.startActivity(intent)
+        }
 
     }
 

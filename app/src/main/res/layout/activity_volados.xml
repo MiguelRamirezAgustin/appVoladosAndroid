@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgraun_main"
+    android:orientation="vertical"
+    tools:context=".VoladosActivity">
+
+
+
+    <LinearLayout
+        android:id="@+id/show_result"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="40dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/items_border"
+        android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sol"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="30sp"/>
+
+            <ImageView
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:src="@drawable/imagen5"
+                android:layout_marginTop="10dp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/show_volados"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="40dp"
+        android:gravity="center"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/items_border"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_view"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:lottie_rawRes="@raw/lf30_editor_lu10gfmk"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp">
+
+        <TextView
+            android:id="@+id/text_view_title"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:layout_gravity="center"
+            android:text="Realizar volado"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"/>
+
+        <View
+            android:layout_width="150dp"
+            android:layout_height="1dp"
+            android:background="@color/white"
+            android:layout_gravity="center"/>
+
+        <View
+            android:layout_width="100dp"
+            android:layout_height="1dp"
+            android:background="@color/white"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_volados"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/items_border"
+        android:orientation="vertical">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:lottie_rawRes="@raw/hand"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="true"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
