@@ -15,10 +15,10 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         var listCurrency = ArrayList<ModelCurrency>()
-        listCurrency.add(ModelCurrency(R.drawable.imagen1,"1 Peso"))
-        listCurrency.add(ModelCurrency(R.drawable.imagen2,"2 Pesos"))
-        listCurrency.add(ModelCurrency(R.drawable.imagen5,"5 Pesos" ))
-        listCurrency.add(ModelCurrency(R.drawable.imagen10,"10 Pesos" ))
+        listCurrency.add(ModelCurrency(R.drawable.imagen1,"1 Peso", 1))
+        listCurrency.add(ModelCurrency(R.drawable.imagen2,"2 Pesos", 2))
+        listCurrency.add(ModelCurrency(R.drawable.imagen5,"5 Pesos", 5 ))
+        listCurrency.add(ModelCurrency(R.drawable.imagen10,"10 Pesos", 10 ))
 
 
         println("List objet-->"+ listCurrency)

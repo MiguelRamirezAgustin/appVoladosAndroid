@@ -13,29 +13,63 @@
     <LinearLayout
         android:id="@+id/show_result"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="550dp"
         android:layout_marginTop="70dp"
         android:layout_marginLeft="40dp"
-        android:gravity="center"
-        android:visibility="gone"
         android:layout_marginRight="40dp"
         android:background="@drawable/items_border"
+        android:visibility="gone"
         android:orientation="vertical">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            app:lottie_rawRes="@raw/success"
+            app:lottie_autoPlay="true"
+            android:layout_gravity="center"
+            app:lottie_loop="true"
+            android:layout_marginTop="10dp"/>
 
 
             <TextView
+                android:id="@+id/text_view_result"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Sol"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="30sp"/>
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="30sp"
+                android:layout_marginTop="20dp"/>
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:gravity="center">
 
             <ImageView
-                android:layout_width="140dp"
-                android:layout_height="140dp"
-                android:src="@drawable/imagen5"
-                android:layout_marginTop="10dp"/>
+                android:id="@+id/img_show_result"
+                android:layout_width="200dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_new_flown"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Nuevo volado"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:textAllCaps="false"
+            android:background="@drawable/items_border_orange"
+            android:textColor="@color/white"
+            android:layout_marginTop="80dp"/>
 
     </LinearLayout>
 
@@ -57,13 +91,9 @@
             android:id="@+id/animation_view"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            app:lottie_rawRes="@raw/lf30_editor_lu10gfmk"
+            app:lottie_rawRes="@raw/lf30_editor_c1a4fmxy"
             app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:lottie_loop="true"/>
 
     </LinearLayout>
 
@@ -107,6 +137,7 @@
         android:layout_marginTop="40dp"
         android:background="@drawable/items_border"
         android:orientation="vertical">
+
 
         <com.airbnb.lottie.LottieAnimationView
             android:layout_width="match_parent"

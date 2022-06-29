@@ -23,7 +23,7 @@ class AdapterCurrency(val context: Context,private var listCurrency:List<ModelCu
 
         holder.img.setOnClickListener{
             val  intent  = Intent(context,VoladosActivity::class.java)
-                 intent.putExtra("process", true)
+            intent.putExtra("processImg", currency.idObject)
             context.startActivity(intent)
         }
 
