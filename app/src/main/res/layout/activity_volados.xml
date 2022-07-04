@@ -8,8 +8,6 @@
     android:orientation="vertical"
     tools:context=".VoladosActivity">
 
-
-
     <LinearLayout
         android:id="@+id/show_result"
         android:layout_width="match_parent"
@@ -80,38 +78,108 @@
         android:layout_height="450dp"
         android:layout_marginTop="70dp"
         android:layout_marginLeft="40dp"
-        android:gravity="center"
         android:layout_marginRight="40dp"
         android:background="@drawable/items_border"
         android:visibility="gone"
         android:orientation="vertical">
 
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:lottie_rawRes="@raw/lf30_editor_ufc9vmey"
+            app:lottie_autoPlay="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"/>
+
 
         <com.airbnb.lottie.LottieAnimationView
             android:id="@+id/animation_view"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_gravity="center"
             app:lottie_rawRes="@raw/lf30_editor_c1a4fmxy"
             app:lottie_autoPlay="true"
+            android:layout_marginTop="40dp"
             app:lottie_loop="true"/>
 
     </LinearLayout>
 
+
     <LinearLayout
-        android:layout_width="match_parent"
+        android:id="@+id/btn_volados"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginTop="40dp">
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/items_border"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_sol"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="5dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:text="Sol"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_aguila"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:text="Aguila"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
 
         <TextView
             android:id="@+id/text_view_title"
             android:layout_width="300dp"
             android:layout_height="50dp"
             android:textColor="@color/white"
-            android:textSize="25sp"
+            android:textSize="22sp"
             android:layout_gravity="center"
             android:text="Realizar volado"
             android:fontFamily="sans-serif-condensed"
+            android:layout_marginTop="15dp"
             android:gravity="center"/>
 
         <View
@@ -127,24 +195,22 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"/>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/btn_volados"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/items_border"
-        android:orientation="vertical">
-
-
-        <com.airbnb.lottie.LottieAnimationView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+        <LinearLayout
+            android:layout_width="240dp"
+            android:layout_height="240dp"
             app:lottie_rawRes="@raw/hand"
-            app:lottie_loop="true"
-            app:lottie_autoPlay="true"/>
+            android:background="@drawable/items_border"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="240dp"
+                android:layout_height="240dp"
+                app:lottie_rawRes="@raw/hand"
+                app:lottie_loop="true"
+                app:lottie_autoPlay="true"/>
+        </LinearLayout>
+
 
     </LinearLayout>
 

@@ -21,7 +21,8 @@ class VoladosActivity : AppCompatActivity() {
         supportActionBar?.hide()
         processImg = intent.getIntExtra("processImg", processImg)
 
-        println("Type process---->"+processImg )
+
+        showmoney(processImg)
 
         btn_volados.setOnClickListener {
             text_view_title.visibility = View.GONE
@@ -29,24 +30,19 @@ class VoladosActivity : AppCompatActivity() {
             show_result.visibility = View.GONE
             show_volados.visibility = View.VISIBLE
 
-
             Handler().postDelayed({
-                val rnds = (1..100).random()
+                val rnds = (1..500).random()
                 if(validateNumber(rnds)){
-                    println("volado------> Es sol")
                     text_view_result.setText("Sol")
                     showImage()
                     showImagenResultSun(processImg)
                 }else{
-                    println("volado------> Es aguila")
                     text_view_result.setText("Aguila")
                     showImage()
                     showImagenResultEagle(processImg)
                 }
-            }, 4000)
+            }, 5000)
         }
-
-
 
         btn_new_flown.setOnClickListener {
             show_result.visibility = View.GONE
@@ -68,6 +64,28 @@ class VoladosActivity : AppCompatActivity() {
         show_volados.visibility = View.GONE
     }
 
+    fun showmoney(processImg:Int){
+        when (processImg) {
+            1 -> {
+                img_sol.setImageResource(R.drawable.imagen1)
+                img_aguila.setImageResource(R.drawable.img1)
+            }
+            2 -> {
+                img_sol.setImageResource(R.drawable.imagen2)
+                img_aguila.setImageResource(R.drawable.img2)
+            }
+            5 -> {
+                img_sol.setImageResource(R.drawable.imagen5)
+                img_aguila.setImageResource(R.drawable.img5)
+            }
+            10 -> {
+                img_sol.setImageResource(R.drawable.imagen10)
+                img_aguila.setImageResource(R.drawable.img10)
+            }
+            else -> {}
+        }
+    }
+
     fun showImagenResultSun(processImg:Int) {
         when (processImg) {
             1 -> {
@@ -86,9 +104,7 @@ class VoladosActivity : AppCompatActivity() {
                 img_show_result.setImageResource(R.drawable.imagen10)
                 animateImage()
             }
-            else -> {
-
-            }
+            else -> {}
         }
     }
 
@@ -110,22 +126,28 @@ class VoladosActivity : AppCompatActivity() {
                 img_show_result.setImageResource(R.drawable.img10)
                 animateImage()
             }
-            else -> {
-
-            }
+            else -> {}
         }
     }
-
 
 
     fun animateImage(){
         img_show_result.animate().apply {
             duration = 1000
             alpha(1F)
-            scaleX(.5F)
+            scaleXBy(.5F)
             scaleYBy(.5F)
             rotationXBy(360F)
-            translationXBy(-360F)
+            translationYBy(200F)
+        }.withEndAction {
+            img_show_result.animate().apply {
+                duration = 1000
+                alpha(1F)
+                scaleXBy(-.5F)
+                scaleYBy(-.5F)
+                rotationXBy(360F)
+                translationYBy(-200F)
+            }
         }.start()
     }
 
