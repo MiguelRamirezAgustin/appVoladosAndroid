@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "715350471000",
+    "project_id": "volados-7fcce",
+    "storage_bucket": "volados-7fcce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:715350471000:android:0db2b33442ee880264352d",
+        "android_client_info": {
+          "package_name": "com.app.volados"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "715350471000-mtie21sjnrd97rc1b7sm82rl52mq198s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwCk7H9pMl68-Jzb4MI1_XfwJ3mAHy0sY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "715350471000-mtie21sjnrd97rc1b7sm82rl52mq198s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
